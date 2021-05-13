@@ -6,7 +6,7 @@ const port = process.env.PORT || 5000
 //mongo client
 //mongo connection string
 const mongoose = require('mongoose')
-const connectionString = "mongodb://localhost:27017/profilesapp"
+const connectionString = "mongodb+srv://Evans:3V4n5@profilesapp.1nj0v.mongodb.net/profilesapp?retryWrites=true&w=majority"
 
 app.use(express.json())
 
