@@ -3,10 +3,17 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 5000
 
+//dotenv
+require('dotenv').config()
+//DB credentials
+const dbUserName = process.env.DBUSERNAME
+const dbPassword = process.env.DBPASSWORD
+
+
 //mongo client
 //mongo connection string
 const mongoose = require('mongoose')
-const connectionString = "mongodb+srv://Evans:3V4n5@profilesapp.1nj0v.mongodb.net/profilesapp?retryWrites=true&w=majority"
+const connectionString = `mongodb+srv://${dbUserName}:${dbPassword}@profilesapp.1nj0v.mongodb.net/profilesapp?retryWrites=true&w=majority`
 
 app.use(express.json())
 
